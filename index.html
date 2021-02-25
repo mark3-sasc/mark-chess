@@ -1,0 +1,45 @@
+<section id="enter">
+	<h1>Tic-Tac-Toe</h1>
+	<label>Please enter your name:</label>
+	<input
+			id="playerName"
+			maxlength="10"
+			type="text"
+	>
+	<button id="join">Join</button>
+</section>
+<section id="waiting" class="hidden">
+	<div>Waiting for another player to join ...</div>
+</section>
+<section id="game" class="hidden">
+	<h1>
+		<span id="myName"></span> vs <span id="otherPlayerName"></span>
+	</h1>
+	<table>
+		<tr rowIndex="0">
+			<td columnIndex="0">
+			</td>
+			<td columnIndex="1">
+			</td>
+			<td columnIndex="2">
+			</td>
+		</tr>
+		<tr rowIndex="1">
+			<td columnIndex="0">
+			</td>
+			<td columnIndex="1">
+			</td>
+			<td columnIndex="2">
+			</td>
+		</tr>
+		<tr rowIndex="2">
+			<td columnIndex="0">
+			</td>
+			<td columnIndex="1">
+			</td>
+			<td columnIndex="2">
+			</td>
+		</tr>
+	</table>
+	<button id="resetButton">Reset</button>
+</section>
