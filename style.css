@@ -1,34 +1,54 @@
-h1 {
-	font-size: 16px;
-	text-align: center;
-	/* width: 100%; */
-}
-
 .hidden {
-	display: none;
+  display: none;
 }
 /* 
 #enter {
   display: none;
 } */
 
+table {
+  border: 1px solid brown;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
 td {
-	border: 1px solid black;
-	font-size: 30px;
-	height: 30px;
-	line-height: 30px;
-	text-align: center;
-	width: 30px;
+  font-size: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: 0px;
+  width: 30px;
+}
+
+.row-header,
+.header,
+.footer {
+  background-color: lightsalmon;
+  font-size: 20px;
+}
+
+.header td,
+.footer td {
+  font-size: 20px;
+}
+
+.white {
+  background-color: white;
+}
+
+.black {
+  background-color: brown;
 }
 
 .O {
-	color: red;
+  color: red;
 }
 
 .X {
-	color: blue;
+  color: blue;
 }
 
 .won {
-	background-color: yellow;
+  background-color: yellow;
 }
