@@ -72,6 +72,106 @@ interface MyGame {
   playerId: string;
 }
 
+var RULES = {
+  "♟": {
+    move: [
+      {
+        direction: "forward",
+        numberOfSquares: [1, 2],
+        mustHaveClearPath: true
+      }
+    ],
+    take: [
+      {
+        direction: "forward-diagonal",
+        numberOfSquares: [1]
+      },
+      {
+        direction: "forward-diagonal",
+        numberOfSquares: [1],
+        specialCondition: {
+          previousOponentsMove: {
+            pieceType: "♟",
+            numberOfSquares: [2],
+            finalLocation: ["leftOfThisPiece", "rightOf"]
+          }
+        }
+      }
+    ]
+  },
+  "♞": {
+    moveAndTake: [
+      {
+        segments: [
+          {
+            direction: "strait",
+            numberOfSquares: [2],
+            mustHaveClearPath: false
+          },
+          {
+            direction: "turnAndStrait",
+            numberOfSquares: [1],
+            mustHaveClearPath: false
+          }
+        ]
+      }
+    ]
+  },
+  "♝": {
+    moveAndTake: [
+      {
+        direction: "diagonal",
+        numberOfSquares: ["any"],
+        mustHaveClearPath: true
+      }
+    ]
+  },
+  "♜": {
+    moveAndTake: [
+      {
+        direction: "strait",
+        numberOfSquares: ["any"],
+        mustHaveClearPath: true
+      }
+    ]
+  },
+  "♛": {
+    moveAndTake: [
+      {
+        direction: "diagonal",
+        numberOfSquares: ["any"],
+        mustHaveClearPath: true
+      },
+      {
+        direction: "strait",
+        numberOfSquares: ["any"],
+        mustHaveClearPath: true
+      }
+    ]
+  },
+  "♚": {
+    moveAndTake: [
+      {
+        direction: "diagonal",
+        numberOfSquares: [1],
+        mustHaveClearPath: true
+      },
+      {
+        direction: "strait",
+        numberOfSquares: [1],
+        mustHaveClearPath: true
+      },
+      {
+        direction: "strait",
+        numberOfSquares: [1],
+        specialCondition: {
+          mustNotHaveMoved: true
+        }
+      }
+    ]
+  }
+};
+
 var board = {
   A: {
     1: "♖",

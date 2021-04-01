@@ -40,15 +40,3 @@ td {
 .black {
   background-color: brown;
 }
-
-.O {
-  color: red;
-}
-
-.X {
-  color: blue;
-}
-
-.won {
-  background-color: yellow;
-}
